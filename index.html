@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soporte Tech Lab</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo-img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <div class="logo-container">
+          <img src="logo.png" alt="Logo Tech Lab" class="logo-img" />
+          <h1 class="logo">Soporte Tech Lab</h1>
+        </div>
+        <a class="btn" href="#contacto">Solicitar diagnóstico</a>
+      </nav>
+
+      <section class="hero-content container">
+        <p class="tag">Soporte técnico profesional</p>
+        <h2>Diagnóstico, mantenimiento preventivo y correctivo de computadores</h2>
+        <p>
+          Ayudamos a empresas y hogares a mantener sus equipos en óptimo estado,
+          reduciendo fallas y mejorando el rendimiento.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#servicios">Ver servicios</a>
+          <a class="btn btn-outline" href="tel:+573133003107">Llamar ahora</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section container" id="servicios">
+        <h3>Nuestros servicios</h3>
+        <div class="grid">
+          <article class="card">
+            <h4>Diagnóstico completo</h4>
+            <p>
+              Identificamos fallas de hardware y software con herramientas
+              especializadas para una solución precisa.
+            </p>
+          </article>
+          <article class="card">
+            <h4>Mantenimiento preventivo</h4>
+            <p>
+              Limpieza interna, optimización del sistema y actualización para
+              evitar daños y alargar la vida útil del equipo.
+            </p>
+          </article>
+          <article class="card">
+            <h4>Mantenimiento correctivo</h4>
+            <p>
+              Reparamos equipos con problemas de arranque, lentitud, virus,
+              sobrecalentamiento o piezas defectuosas.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="beneficios">
+        <div class="container">
+          <h3>¿Por qué elegirnos?</h3>
+          <ul class="list">
+            <li>Técnicos certificados y atención rápida.</li>
+            <li>Diagnóstico inicial y plan de trabajo claro.</li>
+            <li>Soporte para equipos de escritorio y portátiles.</li>
+            <li>Servicio a domicilio para empresas y particulares.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section container" id="contacto">
+        <h3>Contáctanos</h3>
+        <p>
+          Escríbenos para agendar tu servicio y recibir asesoría inmediata.
+        </p>
+        <div class="contact-box">
+          <a href="mailto:soporte@techlab.com">soporte@techlab.com</a>
+          <a href="tel:+573133003107">+57 313 300 3107</a>
+          <a href="tel:+573013507896">+57 301 350 7896</a>
+          <span>Bogotá, Colombia</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Soporte Tech Lab. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
