@@ -1,0 +1,293 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #9226d5;
+  --accent: #22d3ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--text);
+  background: #020617;
+  line-height: 1.5;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  background: radial-gradient(circle at top left, #7e1dd8 0%, var(--bg) 55%);
+  padding-bottom: 3rem;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-image: url("logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.30; /* transparencia */
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.logo-img{
+  width: 80px;
+  mix-blend-mode: multiply;
+}
+
+
+
+.tag {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.hero-content {
+  padding: 3rem 0 1rem;
+}
+
+.hero-content h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin: 0 0 1rem;
+  max-width: 18ch;
+}
+
+.hero-content p {
+  max-width: 60ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #93c5fd;
+}
+
+.section {
+  padding: 3.5rem 0;
+}
+
+.section h3 {
+  margin-top: 0;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid #1f2937;
+  border-radius: 0.8rem;
+  padding: 1rem;
+}
+
+.section-alt {
+  background: #0b1220;
+}
+
+.list {
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-box a,
+.contact-box span {
+  background: #111827;
+  border: 1px solid #1f2937;
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.footer {
+  border-top: 1px solid #1f2937;
+  text-align: center;
+  color: var(--muted);
+  padding: 1.3rem 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    padding-top: 1.5rem;
+  }
+}
+
+.logo-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+
+.slogan{
+  font-size:12px;
+  color:#9ecbff;
+  margin-top:-4px;
+}
+
+.carousel{
+  position:relative;
+  overflow:hidden;
+  margin-top:40px;
+}
+
+.carousel-track{
+  display:flex;
+  transition:transform 0.5s ease;
+}
+
+.carousel img{
+  width:100%;
+  max-height:350px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.carousel-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.5);
+  color:white;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+  border-radius:50%;
+}
+
+.carousel-btn.prev{
+  left:10px;
+}
+
+.carousel-btn.next{
+  right:10px;
+}
+
+.carousel-track{
+  display:flex;
+  gap:20px; /* separación entre imágenes */
+  transition:transform 0.5s ease;
+}
+
+nav{
+  display:flex;
+  gap:8px;
+}
+
+/* botones */
+nav a{
+  position:relative;
+  color:#e5e7eb;
+  text-decoration:none;
+  padding:10px 18px;
+  font-size:14px;
+  font-weight:500;
+  border-radius:10px;
+  transition:all 0.3s ease;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(6px);
+}
+
+/* línea animada abajo */
+nav a::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:4px;
+  width:0%;
+  height:2px;
+  background:linear-gradient(90deg,#7a00c8,#c100ff);
+  transition:0.3s;
+  transform:translateX(-50%);
+}
+
+/* hover */
+nav a:hover{
+  color:white;
+  background:rgba(122,0,200,0.15);
+  box-shadow:0 4px 15px rgba(122,0,200,0.3);
+}
+
+/* animación línea */
+nav a:hover::after{
+  width:70%;
+}
+
+/* activo */
+nav a.active{
+  background:linear-gradient(135deg,#7a00c8,#c100ff);
+  color:white;
+  box-shadow:0 4px 15px rgba(122,0,200,0.4);
+}
